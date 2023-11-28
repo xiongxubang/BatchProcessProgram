@@ -7,17 +7,18 @@ A useful plugin.
 ```
 pip install -r requirements.txt
 ```
-3. Modify all the parameters in "**src/defaults.py**", modify the hyperparameter in "**hyperParam.csv**", and rewrite the customized program "**src/run.py**". <br>
-4. Create the instances. <br>
+3. Modify all the parameters in "**src/defaults.py**" and the hyperparameter in "**hyperParam.csv**". <br>
+4. Rewrite the customized program "**src/run.py**". Recommend to use Symbolic Link to input the dataset to the program, and to output the result to the instance directory. 
+5. Create the instances. <br>
 ```
 python instanceGenerator.py
 ```
-5. Create the scripts and run the program. <br>
+6. Create the scripts and run the program. <br>
 ```
 python makefileGenerator.py
 make run
 ```
-6. Aggregate the output results. All the results corresponding to the hyperparameter in "**hyperParam.csv**" will be output to the file "**result.csv**". <br>
+7. Aggregate the output results. All the results corresponding to the hyperparameter in "**hyperParam.csv**" will be output to the file "**result.csv**". <br>
 ```
 python resultGenerator.py
 ```
