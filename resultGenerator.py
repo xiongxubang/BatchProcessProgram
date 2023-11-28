@@ -1,7 +1,7 @@
 import os
 import pandas as pd
 
-def resultGenerator(csv_path="./hyperParam.csv", annotations_path="./annotations.txt"):
+def resultGenerator(csv_path="./hyperParam.csv", result_path = "result.csv",annotations_path="bpp_config/annotations.txt"):
     # change the work dir path
     working_dir_path = os.path.abspath(os.path.dirname(__file__))
     os.chdir(working_dir_path)
@@ -26,11 +26,15 @@ def resultGenerator(csv_path="./hyperParam.csv", annotations_path="./annotations
                         table.loc[row_num, elem[i]] = value
                 os.chdir(working_dir_path)
     
-    table.to_csv("result.csv")
+    table.to_csv(result_path)
     print(table)
             
         
 
 
 if __name__ == "__main__":
-    resultGenerator()
+    with open("./bpp_config/files_path.txt", "r") as f:
+        lines = f.readlines()           # read all lines
+        params_path = lines[0]          # input table   
+        result_path = lines[3]
+    resultGenerator(params_path, result_path)

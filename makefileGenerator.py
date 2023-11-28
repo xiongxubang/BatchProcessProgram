@@ -14,7 +14,10 @@ if __name__ == "__main__":
     working_dir_path = os.path.abspath(os.path.dirname(__file__))
     os.chdir(working_dir_path)      # change to the dir containing instanceGenerator.py
     
-    params_path = "./hyperParam.csv"    # input table
+    with open("./bpp_config/files_path.txt", "r") as f:
+        lines = f.readlines()           # read all lines
+        params_path = lines[0]          # input table   
+        
     makefile_generator(params_path)
 
 
