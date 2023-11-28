@@ -15,6 +15,7 @@ def run(cfg):
         f.write(str(cfg.Para3)+'\n')
         f.write(str(cfg.Para4)+'\n')
 
+    os.system("chmod +x ../src/sort")
     os.system("../src/sort")
 
     # after
