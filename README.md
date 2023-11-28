@@ -8,7 +8,7 @@ A useful plugin.
 pip install -r requirements.txt
 ```
 3. Modify all the parameters in "**src/defaults.py**" and the hyperparameter in "**hyperParam.csv**". <br>
-4. Rewrite the customized program "**src/run.py**". Recommend to use Symbolic Link to input the dataset to the program, and to output the result to the instance directory. The format could be found in Appendix.
+4. Rewrite the customized program "**src/adapter.py**". Recommend to use Symbolic Link to input the dataset to the program, and to output the result to the instance directory. The format could be found in Appendix.
 5. Create the instances. <br>
 ```
 python instanceGenerator.py
@@ -36,8 +36,9 @@ python plot.py
    1. By default, we have file "**hyperParam.csv**" for the configuration of hyper-parameters. In the this file, we use "." to spilt the tree-based sturcture. <br>
    2. "**bpp_config/files_path.txt**", which stores the names of the input/output files. In gereral, there is no need to modify the content in this file. <br>
    3. "**bpp_config/annotations.txt**", which contains the output files of the algorithm, and the corresponding metrics. <br>
-   4. "**src/run.py**", which is the executable program of the project. (It is **a customized program**. It means that every time execute a new program, you have to reprogram this code.) <br>
+   4. "**src/adapter.py**", which is the executable program of the project. (It is **a customized program**. It means that every time execute a new program, you have to reprogram this code.) <br>
    5. "**src/defaults.py**", which contains **all the default parameters** of the project. <br>
+   6. "**src/run.py**", which is used to send the parameters corresponding to the instance to "**src/adapter.py**". <br>
 5. Output Files (Format of those files can be found in Appendix) <br>
    1. "**result.csv**", which aggregates the result from each instance, based on the contents of "**bpp_config/annotations.txt**". <br>
 
@@ -77,16 +78,20 @@ The format of the line is <br>
 ## Appendix E. Format of "src/run.py"
 The working directory of this program is the instance directory (e.g., 1/). <br>
 The format of the program is <br>
-> read the configuration file (i.e., config.yaml)
-> create a symbolic link from "src/dataLink" to "../data"
-> create some symbolic links from "src/outputLink" to "./output_files"
+> 1. read the configuration file (i.e., config.yaml) <br>
+> 2. send the parameters to "src/adapter.py" by calling it <br>
 
 
 ## Appendix F. Format of "src/adapter.py"
 The working directory of this program is the instance directory (e.g., 1/). <br>
 The format of the program is <br>
-> read the configuration file (i.e., config.yaml)
-> create a symbolic link from "src/dataLink" to "../data"
-> create some symbolic links from "src/outputLink" to "./output_files"
+> 1. receive the configuration file (i.e., config.yaml) <br>
+> 2. create a symbolic link from "src/dataLink" to "../data" <br>
+> 3. create some symbolic links from "src/outputLink" to "./output_files" <br>
+> 4. call the "main.py" <br>
+> 5. reformat the output from "main.py" <br>
+
+The main workflow is: <br>
+![](./workflow.svg)
 
 
