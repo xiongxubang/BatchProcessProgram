@@ -9,8 +9,12 @@ from src.defaults import get_cfg_defaults
 
 
 if __name__ == "__main__":
+  with open("../bpp_config/files_path.txt", "r") as f:
+    lines = f.read().splitlines()           # read all lines
+    config_path = lines[2]
+
   cfg = get_cfg_defaults()
-  cfg.merge_from_file(os.path.join(cur_file_path, "config.yaml"))
+  cfg.merge_from_file(os.path.join(cur_file_path, config_path))
   cfg.freeze()
 
   # when running the instance, the working dir will change to the instance folder

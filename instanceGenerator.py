@@ -1,7 +1,7 @@
 # Generate a series of instances based on the hyperParam.csv file.
 # This .py file should be put in the working directory.
 # This program is suggested being running on the Linux platform.
-# In the hyperParam.csv file, we use "." to spilt the tree-based sturcture.
+# In the hyperParam.csv file,  we use "." to spilt the tree-based sturcture.
 
 import pandas as pd
 import yaml
