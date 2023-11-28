@@ -30,7 +30,7 @@ python resultGenerator.py
    1. By default, we have file "**hyperParam.csv**" for the configuration of hyper-parameters. <br>
    2. "**bpp_config/files_path.txt**", which stores the names of the input/output files. In gereral, there is no need to modify the content in this file. <br>
    3. "**bpp_config/annotations.txt**", which contains the output files of the algorithm, and the corresponding metrics. <br>
-   4. "**src/run.py**", which is the executable program of the project. (It is **a customize program**. It means that every time execute a new program, you have to reprogram this code.) <br>
+   4. "**src/run.py**", which is the executable program of the project. (It is **a customized program**. It means that every time execute a new program, you have to reprogram this code.) <br>
    5. "**src/defaults.py**", which contains **all the default parameters** of the project. <br>
 5. Output Files (Format of those files can be found in Appendix) <br>
    1. "**result.csv**", which aggregates the result from each instance, based on the contents of "**bpp_config/annotations.txt**". <br>
