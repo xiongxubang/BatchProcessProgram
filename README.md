@@ -23,12 +23,16 @@ python resultGenerator.py
 ```
 
 ## Input/Output Files
-1. Input Files (Format of those files can be found in Appendix) <br>
+1. Directory "data", which contains the datasets.
+2. Directory "src", which contains the source codes.
+3. Directory "bpp_config", which contains the configuration files.
+4. Input Files (Format of those files can be found in Appendix) <br>
    1. By default, we have file "hyperParam.csv" for the configuration of hyper-parameters. <br>
    2. "bpp_config/files_path.txt", which stores the names of the input/output files. In gereral, there is no need to modify the content in this file. <br>
    3. "bpp_config/annotations.txt", which contains the output files of the algorithm, and the corresponding metrics. <br>
-2. Output Files (Format of those files can be found in Appendix) <br>
+5. Output Files (Format of those files can be found in Appendix) <br>
    1. "result.csv", which aggregates the result from each instance, based on the contents of "bpp_config/annotations.txt". <br>
+
   
 ## Appendix A. Format of "hyperParam.csv"
 The first line corresponds to the names of hyper-parameters. Then, each following line corresponds to a set of hyper-parameters. <br>
