@@ -83,7 +83,7 @@ def instanceGenerator(csv_path="./hyperParam.csv", run_path="src/run.py", config
 
 if __name__ == "__main__":
     with open("./bpp_config/files_path.txt", "r") as f:
-        lines = f.readlines()           # read all lines
+        lines = f.read().splitlines()           # read all lines
         csv_path = lines[0]          # input table   
         run_path = lines[1]
         config_path = lines[2]

@@ -34,7 +34,7 @@ def resultGenerator(csv_path="./hyperParam.csv", result_path = "result.csv",anno
 
 if __name__ == "__main__":
     with open("./bpp_config/files_path.txt", "r") as f:
-        lines = f.readlines()           # read all lines
+        lines = f.read().splitlines()   # read all lines
         params_path = lines[0]          # input table   
         result_path = lines[3]
     resultGenerator(params_path, result_path)

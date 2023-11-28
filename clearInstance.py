@@ -13,7 +13,7 @@ if __name__ == "__main__":
     os.chdir(working_dir_path)      # change to the dir containing instanceGenerator.py
     
     with open("./bpp_config/files_path.txt", "r") as f:
-        lines = f.readlines()       # read all lines
+        lines = f.read().splitlines()       # read all lines
         params_path = lines[0]       # input table
           
     clear(params_path)

@@ -23,7 +23,7 @@ boxes_solid = ["boxes fs solid 0.3", "boxes fs solid 0.7", "boxes fs solid 0.0",
 def get_df(pairs):
     df = []
     with open("./bpp_config/files_path.txt", "r") as f:
-        lines = f.readlines()           # read all lines
+        lines = f.read().splitlines()   # read all lines
         result_path = lines[3]
     table = pd.read_csv(result_path, index_col=0)
 
