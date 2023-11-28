@@ -90,7 +90,7 @@ The format of the program is <br>
 > 3. create some symbolic links from "src/outputLink" to "./output_files" <br>
 > 4. call the "main.py" <br>
 > 5. reformat the output from "main.py" <br>
-> 6. (optional) first change to work dir to src, then return to the instance dir. <br>
+> 6. (optional) first change to work dir to src, then return to the instance dir. In this case, the real work dir is "src". <br>
 
 The main workflow is: <br>
 ![](./workflow.svg)
