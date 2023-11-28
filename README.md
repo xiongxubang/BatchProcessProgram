@@ -7,7 +7,7 @@ A useful plugin.
 ```
 pip install -r requirements.txt
 ```
-3. Modify the hyperparameter in "**hyperParam.csv**". <br>
+3. Modify all the parameters in "**src/defaults.py**", modify the hyperparameter in "**hyperParam.csv**", and rewrite the customized program "**src/run.py**". <br>
 4. Create the instances. <br>
 ```
 python instanceGenerator.py
