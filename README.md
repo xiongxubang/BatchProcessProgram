@@ -8,7 +8,7 @@ A useful plugin.
 pip install -r requirements.txt
 ```
 3. Modify all the parameters in "**src/defaults.py**" and the hyperparameter in "**hyperParam.csv**". <br>
-4. Rewrite the customized program "**src/run.py**". Recommend to use Symbolic Link to input the dataset to the program, and to output the result to the instance directory. 
+4. Rewrite the customized program "**src/run.py**". Recommend to use Symbolic Link to input the dataset to the program, and to output the result to the instance directory. The format could be found in Appendix.
 5. Create the instances. <br>
 ```
 python instanceGenerator.py
@@ -49,8 +49,14 @@ The format of the line is <br>
 > 1, <value 1.1>, <value 1.2> ... <--- the hyper-parameters for the first instance <br>
 > 2, <value 2.1>, <value 2.2> ... <--- the hyper-parameters for the second instance <br>
 
+## Appendix B. Format of "src/run.py"
+The working directory of this program is the instance directory (e.g., 1/). <br>
+The format of the program is <br>
+> read the configuration file (i.e., config.yaml)
+> create a symbolic link from "src/dataLink" to "../data"
+> create some symbolic links from "src/outputLink" to "./output_files"
 
-## Appendix B. Format of Configure File "bpp_config/files_path.txt"
+## Appendix C. Format of Configure File "bpp_config/files_path.txt"
 Each line corresponds to a path of input/output files. <br>
 > 1. The path of the file for the configuration of hyper-parameters (e.g., "hyperParam.csv")
 > 2. The path of the executable program of the source code (e.g., "src/run.py").
@@ -58,14 +64,14 @@ Each line corresponds to a path of input/output files. <br>
 > 4. The path of the aggregated result file (e.g., "result.csv").
 
 
-## Appendix C. Format of Configure File "bpp_config/annotations.txt"
+## Appendix D. Format of Configure File "bpp_config/annotations.txt"
 Each line corresponds to an output file in each instance. It means that it could be found in each instance directory. Please note that the name of file could contain \<space\>. Each element in each line is separated by \<tab\>. <br>
 The format of the line is <br>
 > <file 1> <metric 1.1> ... <--- The first output file and its corresponding metric <br>
 > <file 2> <metric 2.1> <metric 2.2>... <--- The second output file and its corresponding metric <br>
 
 
-## Appendix D. Format of "result.csv"
+## Appendix E. Format of "result.csv"
 The first line corresponds to the names of hyper-parameters and the metrics. Then, each following line corresponds to a set of hyper-parameters and a set of results. <br>
 The format of the line is <br>
 >  , <para.1> <para.2> ... <metric.1> <metric.2> ... <--- names of hyper-parameters <br>
