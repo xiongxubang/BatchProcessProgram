@@ -15,8 +15,8 @@ python instanceGenerator.py
 ```
 6. Create the scripts and run the program. <br>
 ```
-python makefileGenerator.py
-make run
+python scriptGenerator.py
+./script.sh
 ```
 7. Aggregate the output results. All the results corresponding to the hyperparameter in "**hyperParam.csv**" will be output to the file "**result.csv**". <br>
 ```
@@ -56,6 +56,7 @@ Each line corresponds to a path of input/output files. <br>
 > 2. The path of the executable program of the source code (e.g., "src/run.py").
 > 3. The path of the config file for each instance in yaml style (e.g., "config.yaml").
 > 4. The path of the aggregated result file (e.g., "result.csv").
+> 5. The path of the scrpit (e.g., script.sh)
 
 
 ## Appendix C. Format of Configure File "bpp_config/annotations.txt"
