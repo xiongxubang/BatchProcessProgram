@@ -4,7 +4,7 @@ cur_file_path = os.path.abspath(os.path.dirname(__file__))
 parent_path = os.path.abspath(os.path.join(cur_file_path, ".."))
 sys.path.append(parent_path)            # add the project path (autoParam) to the system path
 
-from src.main import run
+from src.adapter import run
 from src.defaults import get_cfg_defaults
 
 
