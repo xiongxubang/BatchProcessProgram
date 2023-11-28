@@ -38,5 +38,28 @@ The format of the line is <br>
 > 2, <value 2.1>, <value 2.2> ... <--- the hyper-parameters for the second instance <br>
 
 
+## Appendix B. Format of Configure File "bpp_config/files_path.txt"
+Each line corresponds to a path of input/output files. <br>
+> 1. The path of the file for the configuration of hyper-parameters (e.g., "hyperParam.csv")
+> 2. The path of the executable program of the source code (e.g., "src/run.py").
+> 3. The path of the config file for each instance in yaml style (e.g., "config.yaml").
+> 4. The path of the aggregated result file (e.g., "result.csv").
+
+
+## Appendix C. Format of Configure File "bpp_config/annotations.txt"
+Each line corresponds to an output file in each instance. It means that it could be found in each instance directory. Please note that the name of file could contain \<space\>. Each element in each line is separated by \<tab\>. <br>
+The format of the line is <br>
+> <file 1> <metric 1.1> ... <--- The first output file and its corresponding metric <br>
+> <file 2> <metric 2.1> <metric 2.2>... <--- The second output file and its corresponding metric <br>
+
+
+## Appendix D. Format of "result.csv"
+The first line corresponds to the names of hyper-parameters and the metrics. Then, each following line corresponds to a set of hyper-parameters and a set of results. <br>
+The format of the line is <br>
+>  , <para.1> <para.2> ... <metric.1> <metric.2> ... <--- names of hyper-parameters <br>
+> 1, <value 1.1>, <value 1.2> ... <result 1.1> <result 1.2> ... <--- the hyper-parameters and results for the first instance <br>
+> 2, <value 2.1>, <value 2.2> ... <result 2.1> <result 2.2> ... <--- the hyper-parameters and results for the second instance <br>
+
+
 
 
