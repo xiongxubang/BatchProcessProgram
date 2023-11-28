@@ -27,7 +27,7 @@ python resultGenerator.py
 2. Directory "**src**", which contains the source codes. <br>
 3. Directory "**bpp_config**", which contains the configuration files. <br>
 4. Input Files (Format of those files can be found in Appendix) <br>
-   1. By default, we have file "**hyperParam.csv**" for the configuration of hyper-parameters. <br>
+   1. By default, we have file "**hyperParam.csv**" for the configuration of hyper-parameters. In the this file, we use "." to spilt the tree-based sturcture. <br>
    2. "**bpp_config/files_path.txt**", which stores the names of the input/output files. In gereral, there is no need to modify the content in this file. <br>
    3. "**bpp_config/annotations.txt**", which contains the output files of the algorithm, and the corresponding metrics. <br>
    4. "**src/run.py**", which is the executable program of the project. (It is **a customized program**. It means that every time execute a new program, you have to reprogram this code.) <br>
