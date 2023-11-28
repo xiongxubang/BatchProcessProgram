@@ -49,14 +49,8 @@ The format of the line is <br>
 > 1, <value 1.1>, <value 1.2> ... <--- the hyper-parameters for the first instance <br>
 > 2, <value 2.1>, <value 2.2> ... <--- the hyper-parameters for the second instance <br>
 
-## Appendix B. Format of "src/run.py"
-The working directory of this program is the instance directory (e.g., 1/). <br>
-The format of the program is <br>
-> read the configuration file (i.e., config.yaml)
-> create a symbolic link from "src/dataLink" to "../data"
-> create some symbolic links from "src/outputLink" to "./output_files"
 
-## Appendix C. Format of Configure File "bpp_config/files_path.txt"
+## Appendix B. Format of Configure File "bpp_config/files_path.txt"
 Each line corresponds to a path of input/output files. <br>
 > 1. The path of the file for the configuration of hyper-parameters (e.g., "hyperParam.csv")
 > 2. The path of the executable program of the source code (e.g., "src/run.py").
@@ -64,14 +58,14 @@ Each line corresponds to a path of input/output files. <br>
 > 4. The path of the aggregated result file (e.g., "result.csv").
 
 
-## Appendix D. Format of Configure File "bpp_config/annotations.txt"
+## Appendix C. Format of Configure File "bpp_config/annotations.txt"
 Each line corresponds to an output file in each instance. It means that it could be found in each instance directory. Please note that the name of file could contain \<space\>. Each element in each line is separated by \<tab\>. <br>
 The format of the line is <br>
 > <file 1> <metric 1.1> ... <--- The first output file and its corresponding metric <br>
 > <file 2> <metric 2.1> <metric 2.2>... <--- The second output file and its corresponding metric <br>
 
 
-## Appendix E. Format of "result.csv"
+## Appendix D. Format of "result.csv"
 The first line corresponds to the names of hyper-parameters and the metrics. Then, each following line corresponds to a set of hyper-parameters and a set of results. <br>
 The format of the line is <br>
 >  , <para.1> <para.2> ... <metric.1> <metric.2> ... <--- names of hyper-parameters <br>
@@ -79,5 +73,19 @@ The format of the line is <br>
 > 2, <value 2.1>, <value 2.2> ... <result 2.1> <result 2.2> ... <--- the hyper-parameters and results for the second instance <br>
 
 
+## Appendix E. Format of "src/run.py"
+The working directory of this program is the instance directory (e.g., 1/). <br>
+The format of the program is <br>
+> read the configuration file (i.e., config.yaml)
+> create a symbolic link from "src/dataLink" to "../data"
+> create some symbolic links from "src/outputLink" to "./output_files"
+
+
+## Appendix F. Format of "src/adapter.py"
+The working directory of this program is the instance directory (e.g., 1/). <br>
+The format of the program is <br>
+> read the configuration file (i.e., config.yaml)
+> create a symbolic link from "src/dataLink" to "../data"
+> create some symbolic links from "src/outputLink" to "./output_files"
 
 
