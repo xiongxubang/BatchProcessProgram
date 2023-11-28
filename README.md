@@ -22,6 +22,11 @@ make run
 ```
 python resultGenerator.py
 ```
+8. (optional) Create the configuration file of plot in Directory "**plot_config**", following the style of "**plot_config/line_template.yaml**" or "**plot_config/plot_config_template.yaml**". Then, add the file name to "**plot_config/plot_files.txt**".
+9. (optional) Plot all the instances in "**plot_config/plot_files.txt**", and output the .esp file to the working directory.
+```
+python plot.py
+```
 
 ## Input/Output Files
 1. Directory "**data**", which contains the datasets. <br>
