@@ -1,0 +1,20 @@
+Data:
+  # "1 2 4-6@2 3" means choose row 1,2,4,5,6 col 2,3 to plot, col 2 is x-axis, col 3 is y-axis, begin with 0
+  X_Y: 
+  - '1 2 4-6@2 3'   
+  - '1 2 5-6@2 3'
+  X_Y_Name: 
+  - Algorithm 1
+  - Algorithm 3
+
+Key: right top
+Log: []
+Output_file: output.eps
+Pointsize: 2
+Type: line
+Xlabel: epoch
+Xrange: ''
+Xtics: []
+Ylabel: acc
+Yrange: ''
+Ytics: []

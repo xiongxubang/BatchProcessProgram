@@ -1,0 +1,2 @@
+stat.txt	no. of swappings
+time.txt	read time	sort time	write time	overall time

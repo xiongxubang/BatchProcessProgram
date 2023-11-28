@@ -1,0 +1,18 @@
+Data:
+  # "1 2 4-6@2 3" means choose row 1,2,4,5,6 col 2,3 to plot, col 2 is x-axis, col 3 is y-axis
+  X_Y: 
+  - '1-4@1 9'   
+  X_Y_Name: 
+  - Sort
+
+Key: right top
+Log: []
+Output_file: line1.eps
+Pointsize: 2
+Type: line
+Xlabel: datasize
+Xrange: ''
+Xtics: []
+Ylabel: execution time
+Yrange: ''
+Ytics: []
