@@ -18,7 +18,7 @@ def run(cfg):
     os.system("chmod +x ../src/sort")
     os.system("../src/sort")
 
-    # after
+    # reformat
     ans = []
     with open('time.txt',"r") as f:
         lines = f.read().splitlines()
