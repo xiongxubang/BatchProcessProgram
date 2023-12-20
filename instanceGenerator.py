@@ -37,14 +37,18 @@ def csv2yaml(row, config_path, csv_path):
                 current[key] = {}
             current = current[key]
         key = col_name_split[-1]                            # the last one
-        if type(value) == str:
-                current[key] = value
-        elif type(value.item()) == int:
-            current[key] = value.item()
-        elif float.is_integer(value.item()):                # is integer
-            current[key] = int(value.item())
-        else:
-            current[key] = value.item()
+        try:
+            if type(value.item()) == bool:
+                current[key] = value.item()
+        except AttributeError:
+            if type(value) == str:
+                    current[key] = value
+            elif type(value.item()) == int:
+                current[key] = value.item()
+            elif float.is_integer(value.item()):                # is integer
+                current[key] = int(value.item())
+            else:
+                current[key] = value.item()
     
     # save the dict as a .yaml file
     with open(config_path,"w") as f:                  
