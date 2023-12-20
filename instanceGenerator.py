@@ -42,7 +42,23 @@ def csv2yaml(row, config_path, csv_path):
                 current[key] = value.item()
         except AttributeError:
             if type(value) == str:
-                    current[key] = value
+                    # list -> float or int
+                    if value[0]=='[' and value[-1]==']':
+                        temp=value.strip('[')
+                        temp=temp.strip(']')
+                        temp=temp.split(',')    # "[a,b,c]" -> ["a","b","c"]
+                        temp = list(map(float, temp))
+                        is_int = True
+                        for num in temp:
+                            if float.is_integer(num) == False:
+                                is_int = False
+                                break
+                        if is_int:
+                            temp = list(map(int, temp))
+                            
+                        current[key] = temp
+                    else:
+                        current[key] = value
             elif type(value.item()) == int:
                 current[key] = value.item()
             elif float.is_integer(value.item()):                # is integer
