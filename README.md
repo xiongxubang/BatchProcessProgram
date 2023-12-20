@@ -45,6 +45,7 @@ python plot.py
   
 ## Appendix A. Format of "hyperParam.csv"
 The first line corresponds to the names of hyper-parameters. Then, each following line corresponds to a set of hyper-parameters. Please note the the parameters in this .csv file are the subset of those in "**src/defaults.py**". <br>
+Please note that the names of hyper-parameters could represent the tree-based structure, separated by '.'. <br>
 The format of the line is <br>
 >  , <para.1> <para.2> ... <--- names of hyper-parameters <br>
 > 1, <value 1.1>, <value 1.2> ... <--- the hyper-parameters for the first instance <br>
